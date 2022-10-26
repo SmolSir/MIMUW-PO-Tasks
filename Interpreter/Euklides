@@ -1,0 +1,105 @@
+{
+    "typ": "Blok",
+    "instrukcje": [
+        {
+            "typ": "Przypisanie",
+            "nazwa": "a",
+            "wartosc": {
+                "typ": "Liczba",
+                "wartosc": 1989.0
+            }
+        },
+        {
+            "typ": "Przypisanie",
+            "nazwa": "b",
+            "wartosc": {
+                "typ": "Liczba",
+                "wartosc": 867.0
+            }
+        },
+        {
+            "typ": "While",
+            "blok": {
+                "typ": "Blok",
+                "instrukcje": [
+                    {
+                        "typ": "While",
+                        "blok": {
+                            "typ": "Blok",
+                            "instrukcje": [
+                                {
+                                    "typ": "Przypisanie",
+                                    "nazwa": "b",
+                                    "wartosc": {
+                                        "typ": "Minus",
+                                        "argument1": {
+                                            "typ": "Zmienna",
+                                            "nazwa": "b"
+                                        },
+                                        "argument2": {
+                                            "typ": "Zmienna",
+                                            "nazwa": "a"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "warunek": {
+                            "typ": "<=",
+                            "argument1": {
+                                "typ": "Zmienna",
+                                "nazwa": "a"
+                            },
+                            "argument2": {
+                                "typ": "Zmienna",
+                                "nazwa": "b"
+                            }
+                        }
+                    },
+                    {
+                        "typ": "Przypisanie",
+                        "nazwa": "temp",
+                        "wartosc": {
+                            "typ": "Zmienna",
+                            "nazwa": "a"
+                        }
+                    },
+                    {
+                        "typ": "Przypisanie",
+                        "nazwa": "a",
+                        "wartosc": {
+                            "typ": "Zmienna",
+                            "nazwa": "b"
+                        }
+                    },
+                    {
+                        "typ": "Przypisanie",
+                        "nazwa": "b",
+                        "wartosc": {
+                            "typ": "Zmienna",
+                            "nazwa": "temp"
+                        }
+                    }
+                ]
+            },
+            "warunek": {
+                "typ": "Not",
+                "argument": {
+                    "typ": "==",
+                    "argument1": {
+                        "typ": "Zmienna",
+                        "nazwa": "a"
+                    },
+                    "argument2": {
+                        "typ": "Liczba",
+                        "wartosc": 0.0
+                    }
+                }
+            }
+        },
+        {
+            "typ": "Zmienna",
+            "nazwa": "b"
+        }
+    ]
+}
