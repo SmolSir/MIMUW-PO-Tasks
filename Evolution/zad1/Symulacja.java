@@ -27,8 +27,6 @@ public class Symulacja {
      *      numeru bieżącej tury. Tury liczymy od 1 do ile_tur.
      */
 
-    // javac src/*.java
-    // java -cp src zad1.Symulacja plansza.txt
     public static int rozmiar_planszy_x;
     public static int rozmiar_planszy_y;
     public static int ile_tur;
@@ -62,7 +60,7 @@ public class Symulacja {
         System.out.println("SYMULACJA ROZPOCZĘTA\n");
 
         for (int tura = 1; tura <= ile_tur; tura++) {
-            //plansza.aktualizuj_jedzenie(tura);
+            plansza.aktualizuj_jedzenie(tura);
             plansza.symuluj_roby(tura);
             plansza.powiel_roby(tura);
 
